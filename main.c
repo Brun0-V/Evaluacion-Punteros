@@ -7,7 +7,7 @@ void convertirPrimerLetraMayuscula(char* oracion);
 int main() {
     char stringInput[250];          //Inicializa un string de 250 caracteres.
     printf("Ingrese una oracion de hasta 250 caracteres: "); scanf("%[^\n]s", stringInput);     //Pide al usuario que lo ingrese.
-    printf("String original: %s", stringInput);      //Imprime el string original
+    printf("String original: %s\n", stringInput);      //Imprime el string original
     convertirTodoMayuscula(stringInput);        //Lo convierte a mayusculas
     printf("String todo mayuscula: %s\n", stringInput);     //Imprime el string modificado
     convertirTodoMinuscula(stringInput);        //Lo convierte a minusculas

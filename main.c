@@ -24,10 +24,10 @@ int main() {
 */
 void convertirTodoMayuscula(char* oracion){
     do {
-        if (*oracion >= 'a' && *oracion <= 'z')     //Revisa si el caracter al que se apunta es una letra minuscula
-            *oracion = *oracion - 32;        //Restando 32, en el codigo ASCII es esa misma letra en mayuscula         
-        oracion++;
-    } while (*oracion != '\0');          //Ejecuta el codigo hasta que el caracter '\0' (null) sea encontrado     
+        if (*oracion >= 'a' && *oracion <= 'z') //Revisa si el caracter al que se apunta es una letra minuscula:
+            *oracion -= 32;                              //Se le resta 32, que en el codigo ASCII esel equivalente a esa misma letra en mayuscula.     
+        oracion++; //Incrementa el valor del puntero, pasando al proximo lugar del string.
+    } while (*oracion != '\0');  //Ejecuta el codigo hasta que el caracter '\0' (null) sea encontrado.
 }
 
 
@@ -38,10 +38,10 @@ void convertirTodoMayuscula(char* oracion){
 */
 void convertirTodoMinuscula(char* oracion) {
     do {
-        if (*oracion >= 'A' && *oracion <= 'Z')     //Revisa si el caracter al que se apunta es una letra mayuscula
-            *oracion = *oracion + 32;       //Sumando 32, en el codigo ASCII es esa misma letra en minuscula
-        oracion++;
-    } while (*oracion != '\0');          //Ejecuta el codigo hasta que el caracter '\0' (null) sea encontrado
+        if (*oracion >= 'A' && *oracion <= 'Z') //Revisa si el caracter al que se apunta es una letra mayuscula:
+            *oracion += 32;                              //Se le suma 32, que en el codigo ASCII esel equivalente a esa misma letra en minuscula.
+        oracion++; //Incrementa el valor del puntero, pasando al proximo lugar del string.
+    } while (*oracion != '\0');  //Ejecuta el codigo hasta que el caracter '\0' (null) sea encontrado.
 }
 
 /**
@@ -52,16 +52,16 @@ void convertirTodoMinuscula(char* oracion) {
 void convertirPrimerLetraMayuscula(char* oracion){
     int first = 1;
     do {   
-        if (first){
-            if (*oracion >= 'a' && *oracion <= 'z' && *oracion != ' '){     //Revisa si el caracter al que se apunta es una letra minuscula y si no es un espacio
-                *oracion = *oracion - 32;        //Restando 32, en el codigo ASCII es esa misma letra en mayuscula
-                first = 0;
+        if (first){   //Si la flag es 1 (o diferente de 0):
+            if (*oracion >= 'a' && *oracion <= 'z' && *oracion != ' '){  //Revisa si el caracter al que se apunta es una letra minuscula y si no es un espacio:
+                *oracion -= 32;                                                              //Se le resta 32, que en el codigo ASCII esel equivalente a esa misma letra en mayuscula
+                first = 0;                                                                     //La flag de primera letra se vuelve a 0.
             }
         }
-        else{
-            if (*oracion == ' ')
-                first = 1;
+        else{    //Si la flag es 0 :
+            if (*oracion == ' ') // Y el caracter actual es un ' ' (espacio):
+                first = 1;         //La flag de primera letra vuelve a ser 1, para en el proximo ciclo aplicarle la mayuscula.
         }
-        oracion++;
-    } while (*oracion != '\0');          //Ejecuta el codigo hasta que el caracter '\0' (null) sea encontrado
+        oracion++; //Incrementa el valor del puntero, pasando al proximo lugar del string.
+    } while (*oracion != '\0');  //Ejecuta el codigo hasta que el caracter '\0' (null) sea encontrado
 }

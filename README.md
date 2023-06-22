@@ -13,8 +13,11 @@ El programa debe solicitar al usuario que ingrese una oración de hasta 250 cara
 Entrada
 Ingresa una oración de hasta 250 caracteres: HoLa, mUndo! eSToy eN el DesaFÍo del EDITOR de TexTo.
 Salida esperada
+
 Oracion en MAYUSCULAS: HOLA, MUNDO! ESTOY EN EL DESAFIO DEL EDITOR DE TEXTO.
+
 Oracion en minusculas: hola, mundo! estoy en el desafio del editor de texto.
+
 Oracion con Inicial Mayuscula: Hola, Mundo! Estoy En El Desafio Del Editor De Texto.
 ## Resolución:
 ```c
